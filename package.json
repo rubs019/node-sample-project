@@ -1,0 +1,38 @@
+{
+  "name": "sampleproject",
+  "version": "0.0.1",
+  "private": true,
+  "main": "bin/www",
+  "scripts": {
+    "serve:dev": "NODE_ENV='development' ./node_modules/nodemon/bin/nodemon.js --inspect bin/www",
+    "serve:prod": "NODE_ENV='production' node bin/www",
+    "test": "./node_modules/mocha/bin/mocha --require babel-core/register --require @babel/polyfill --recursive ./test",
+    "lint": "./node_modules/eslint/bin/eslint.js src"
+  },
+  "author": "Ruben DESERT",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "@babel/polyfill": "^7.2.3",
+    "dotenv": "^6.2.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.10.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.3.0"
+  }
+}
