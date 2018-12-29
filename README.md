@@ -1,4 +1,5 @@
 # node-sample-project
+![Build Status](https://travis-ci.org/rubs019/node-sample-project.svg?branch=master)
 
 **Node-sample-project** is a kickstarter for a Node.js API.
 
