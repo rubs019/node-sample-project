@@ -7,6 +7,7 @@
     "serve:dev": "NODE_ENV='development' ./node_modules/nodemon/bin/nodemon.js --inspect dist/server",
     "serve:prod": "NODE_ENV='production' node dist/server",
     "watch": "tsc -w",
+    "build": "tsc --build tsconfig.json",
     "test:unit": "./node_modules/mocha/bin/mocha --recursive ./test",
     "lint": "./node_modules/eslint/bin/eslint.js dist/"
   },
