@@ -1,7 +1,19 @@
-const assert = require('assert').strict
+const app = require('../dist/app/app')
+const chai  = require('chai')
+const chaiHttp = require('chai-http')
+const expect = chai.expect
 
-describe('sampleTest', () => {
-    it('Should return 2', () => {
-        assert.strictEqual(1 + 1, 2)
+chai.use(chaiHttp)
+
+describe('Chai test', () => {
+    it('Should work', () => {
+        chai.request(app)
+            .get('/')
+            .end((err, res) => {
+                expect(err).to.be.null
+                expect(res).to.have.status(200)
+                expect(res).to.be.json
+                expect(res.body.message).to.equal('Success')
+            })
     })
 })
